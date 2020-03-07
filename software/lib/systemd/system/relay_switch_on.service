@@ -1,0 +1,11 @@
+[Unit]
+Description=Turn on relay at startup
+DefaultDependencies=false
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/relayOn.py
+Restart=no
+
+[Install]
+WantedBy=sysinit.target

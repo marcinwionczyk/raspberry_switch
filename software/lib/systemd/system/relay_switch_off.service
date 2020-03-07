@@ -1,0 +1,13 @@
+[Unit]
+Description=Shutdowns relay switch at power off
+DefaultDependencies=no
+Conflicts=reboot.target
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/relayOff.py
+TimeoutStartSec=0
+
+[Install]
+WantedBy=shutdown.target
