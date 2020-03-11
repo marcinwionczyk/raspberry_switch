@@ -1,11 +1,13 @@
 # raspberry_switch
-A switch to turn on and truly turn off raspberry Pi.
+A switch to turn on and truly turn off raspberry Pi (Zero).
 
 ## How it works
 
 From schematic point of view, it look like this:
 
 ![Schematics](schematics.png)
+
+![Top view](top.png)
 
 When SW2 switch is pressed, NE555 will keep power on for approximately 24 seconds.
 During this time, Raspberry Pi will boot and start service 
@@ -18,6 +20,9 @@ low and effectively cut off the power.
 I have designed PCB with Autodesk Eagle. You may download and change according to your liking: 
 * [schematics](hardware/Autodesk%20Eagle%20project/main.sch), 
 * [board](hardware/Autodesk%20Eagle%20project/main.brd)
+
+There are also [gerber files](hardware/gerber_files.zip)
+
 
 ## How to install
 1. Copy everything from software folder into your root folder
